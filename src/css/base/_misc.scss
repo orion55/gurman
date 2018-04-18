@@ -1,0 +1,93 @@
+@import "_vars.scss";
+
+::selection {
+  background-color: $color-main;
+  color: white;
+}
+
+.hvr-fade {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  //overflow: hidden;
+  transition-duration: 0.3s;
+  transition-property: color, background-color;
+}
+
+.hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
+  //background: linear-gradient(180deg, #6b64ac 0%, #9087c2 100%);
+  background-color: $color-two;
+  color: white;
+}
+
+.hvr-grow {
+  //display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  transform: scale(1.1);
+}
+
+.pure-button, input.pure-button {
+  /* Structure */
+  display: inline-block;
+  zoom: 1;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+/* Firefox: Get rid of the inner focus border */
+.pure-button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+.pure-button, input.pure-button {
+  font-family: inherit;
+  font-size: 100%;
+  background: linear-gradient(180deg, #bf67cb 0%, #d893e0 100%);
+  text-decoration: none;
+  color: white;
+  transition-delay: .5s;
+}
+
+.pure-button-hover, .pure-button:hover, .pure-button:focus, input.pure-button:hover, input.pure-button:focus {
+  //filter: alpha(opacity=90);
+  //background: linear-gradient(180deg, #6b64ac 0%, #9087c2 100%);
+  color: white;
+}
+
+.pure-button:focus {
+  outline: 0;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #ffffff;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 5px;
+  background-color: $color-main;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  width: 5px;
+  background-color: $color-main;
+}
+
