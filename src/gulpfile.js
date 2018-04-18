@@ -81,14 +81,14 @@ gulp.task('fonts', function () {
 gulp.task('deploy-ftp', function () {
 
     var conn = ftp.create({
-        host: '',
-        user: '',
-        password: '',
+        host: 'grol55wy.beget.tech',
+        user: 'grol55wy',
+        password: 'liDDJhuJ',
         parallel: 10,
         log: gutil.log
     });
 
-    const path = '/wordpress/public_html/wp-content/themes/vp/assets/';
+    const path = '/gurman.infoblog72.ru/public_html/wp-content/themes/gurman/assets/';
 
     var globs = [
         '../assets/' + subfolder + '/**'
