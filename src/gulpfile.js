@@ -4,7 +4,7 @@ var rename = require('gulp-rename');
 var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
 var autoPrefixer = require('gulp-autoprefixer');
-var groupCssMediaQueries = require('group-css-media-queries');
+var gcmq = require('gulp-group-css-media-queries');
 var cleanCss = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
@@ -31,7 +31,7 @@ gulp.task('sass', function () {
         .pipe(sassGlob())
         .pipe(sass())
         .pipe(autoPrefixer())
-        .pipe(groupCssMediaQueries())
+        .pipe(gcmq())
         .pipe(concat('main.css'))
         .pipe(gulp.dest(docs + 'css/'))
         .pipe(rename({
