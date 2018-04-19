@@ -34,7 +34,9 @@
 .header__picture {
   @include col();
   @include size(2);
+  @include size-lg(2);
   @include size-md(2);
+  @include size-sm(12);
   @include size-xs(12);
   margin: 0 auto;
   text-align: center;
@@ -44,16 +46,24 @@
 .header__social {
   @include col();
   @include size(2);
-  @include size-md(2);
+  @include size-lg(1);
+  @include size-md(1);
+  @include size-sm(12);
   @include size-xs(12);
   margin: 0 auto;
+  padding-top: 73px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .header__phone {
   @include col();
   @include size(2);
-  @include size-md(2);
+  @include size-lg(3);
+  @include size-md(3);
+  @include size-sm(12);
   @include size-xs(12);
+  padding-top: 50px;
 }
 
 .main-navigation .menu {
@@ -76,20 +86,99 @@
 }
 
 .sub-menu {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .sub-menu li {
   padding: 7px;
-  &:last-of-type {
-    border-bottom: solid 3px #a60015;
+  border-bottom: solid 1px white;
+  a {
+    color: black;
+  }
+  &:hover {
+    background-color: rgba(255, 255, 255, 1);
   }
 }
 
-.main-navigation ul ul {
-  //top: 115%;
+.main-navigation ul ul a {
+  padding-left: 15px;
 }
 
-.main-navigation ul ul a {
-  padding-left: 20px;
+.menu-item-has-children > a:after {
+  font-family: "Font Awesome 5 Solid", Arial, sans-serif;
+  display: none;
+  content: '\f078';
+  transition: color .5s ease;
+  color: #fff;
+}
+
+.menu-item-has-children > a svg {
+  margin-left: 7px;
+  font-size: 0.7em;
+}
+
+.menu-item a {
+  transition: color .5s ease;
+}
+
+.main-navigation ul ul {
+  border: solid 1px white;
+}
+
+.soc__url {
+  svg {
+    font-size: 26px;
+    color: $color-main;
+  }
+}
+
+.phone-number {
+  color: #000000;
+  font-size: 1.625rem;
+  font-weight: 400;
+  &:hover {
+    color: lighten(black, 10%);
+  }
+}
+
+@media only screen and (min-device-width: 961px) and (max-width: 1199px) {
+  .header__social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+  }
+  .header__phone {
+    width: 20%;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-width: 960px) {
+  .header__social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .main-navigation {
+    display: none;
+  }
+  .header__phone {
+    text-align: center;
+    padding-top: 35px;
+  }
+  .header__social {
+    padding-top: 35px;
+    order: 1;
+  }
+  .phone-number {
+    font-size: 35px;
+    font-weight: 700;
+  }
+  .soc__url svg {
+    font-size: 35px;
+  }
 }
