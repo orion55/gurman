@@ -71,8 +71,8 @@
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+  width: 7px;
+  height: 7px;
 }
 
 ::-webkit-scrollbar-track-piece {
@@ -80,12 +80,12 @@
 }
 
 ::-webkit-scrollbar-thumb:vertical {
-  height: 5px;
+  height: 7px;
   background-color: $color-main;
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
-  width: 5px;
+  width: 7px;
   background-color: $color-main;
 }
 

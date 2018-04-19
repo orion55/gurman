@@ -1,2 +1,95 @@
 @import "../base/_vars";
 
+.header {
+  background: url('../img/header/background.jpg') no-repeat center center;
+  background-size: cover;
+  height: 1220px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url('../img/header/ellipse.png') no-repeat center center;
+    height: 212px;
+    width: 100%;
+    z-index: 0;
+  }
+}
+
+.header__wrap {
+  @include row-flex();
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 100;
+}
+
+.main-navigation {
+  @include col();
+  @include size(5);
+  @include size-md(5);
+}
+
+.header__picture {
+  @include col();
+  @include size(2);
+  @include size-md(2);
+  @include size-xs(12);
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.header__social {
+  @include col();
+  @include size(2);
+  @include size-md(2);
+  @include size-xs(12);
+  margin: 0 auto;
+}
+
+.header__phone {
+  @include col();
+  @include size(2);
+  @include size-md(2);
+  @include size-xs(12);
+}
+
+.main-navigation .menu {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 77px;
+}
+
+.main-navigation li {
+  color: #000000;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.main-navigation a {
+  color: black;
+  &:hover {
+    color: $color-main;
+  }
+}
+
+.sub-menu {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.sub-menu li {
+  padding: 7px;
+  &:last-of-type {
+    border-bottom: solid 3px #a60015;
+  }
+}
+
+.main-navigation ul ul {
+  //top: 115%;
+}
+
+.main-navigation ul ul a {
+  padding-left: 20px;
+}

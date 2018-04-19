@@ -82,13 +82,13 @@ gulp.task('deploy-ftp', function () {
 
     var conn = ftp.create({
         host: 'grol55wy.beget.tech',
-        user: 'grol55wy',
-        password: 'liDDJhuJ',
+        user: 'grol55wy_gurman',
+        password: 'gurman,021.',
         parallel: 10,
         log: gutil.log
     });
 
-    const path = '/gurman.infoblog72.ru/public_html/wp-content/themes/gurman/assets/';
+    const path = '/wp-content/themes/gurman/assets/';
 
     var globs = [
         '../assets/' + subfolder + '/**'
