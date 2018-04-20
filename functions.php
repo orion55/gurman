@@ -174,3 +174,11 @@ if (defined('JETPACK__VERSION')) {
 }
 
 require get_template_directory() . '/inc/admin-panel.php';
+
+function mailing_address()
+{
+    $address = carbon_get_theme_option('crb_address');
+    return $var = !empty($address) ? $address : "";
+}
+
+add_shortcode('MAILING_ADDRESS', 'mailing_address');

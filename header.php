@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.png">
-    <script>FontAwesomeConfig = {searchPseudoElements: true};</script>
     <?php wp_head(); ?>
 </head>
 
@@ -33,6 +32,22 @@
         </div>
         <div class="header__phone">
             <?php get_template_part('inc/phone'); ?>
+        </div>
+    </div>
+    <div class="info">
+        <div class="info__wrap">
+            <h1 class="info__title">Сербская кухня</h1>
+            <div class="info__slogan">Проведение банкетов, фуршетов и других мероприятий</div>
+            <div class="info__btn">
+                <a href="#"
+                   class="info__link pure-button hvr-shutter-out-horizontal popmake-contact modal-blur">Заказать столик</a>
+            </div>
+            <?php $slogan = carbon_get_theme_option('crb_slogan');
+            if (!empty($slogan)):?>
+                <div class="info__block">
+                    <?php echo wpautop($slogan); ?>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 </header>
