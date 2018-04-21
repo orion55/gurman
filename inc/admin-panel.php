@@ -43,4 +43,19 @@ function crb_attach_theme_options()
             Field::make('image', 'crb_smallhall_photo', 'Фото малого зала')
                 ->set_value_type('url')
         ));
+
+    Container::make('post_meta', __('Опции блюда', 'crb'))
+        ->where('post_type', '=', 'dish')
+        ->add_fields(array(
+            Field::make('text', 'price_dish', 'Цена блюда')
+                ->set_attribute('type', 'number')
+                ->set_attribute('min', '0')
+        ));
+
+    Container::make( 'term_meta', __( 'Опции категории', 'crb' ) )
+        ->where( 'term_taxonomy', '=', 'carte' )
+        ->add_fields( array(
+            Field::make('image', 'carte_photo', 'Картинка для главной страницы')
+                ->set_value_type('url')
+        ) );
 }

@@ -129,6 +129,8 @@ function gurman_scripts()
     wp_enqueue_style('gurman-style', get_stylesheet_uri());
     wp_enqueue_style('gurman-style-main', get_template_directory_uri() . '/assets/css/main.min.css', array(), '', 'all');
     wp_enqueue_style('gurman-fa', get_template_directory_uri() . '/css/fa-svg-with-js.css');
+    wp_enqueue_style('gurman-slick', get_template_directory_uri() . '/css/slick.css');
+    wp_enqueue_style('gurman-slick-theme', get_template_directory_uri() . '/css/slick-theme.css');
 
     wp_enqueue_script('gurman-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true);
 
@@ -141,6 +143,7 @@ function gurman_scripts()
     wp_enqueue_script('gurman-fontawesome', get_template_directory_uri() . '/js/fontawesome-all.min.js', [], '', true);
     wp_enqueue_script('gurman-map', 'https://api-maps.yandex.ru/2.1/?lang=ru_RU', [], '', true);
     wp_enqueue_script('jquery');
+    wp_enqueue_script('gurman-slick', get_template_directory_uri() . '/js/slick.min.js', array('jquery'), '', true);
     wp_enqueue_script('gurman-main', get_template_directory_uri() . '/assets/js/main.min.js', array('jquery'), '', true);
 }
 

@@ -1,0 +1,54 @@
+@import "../base/_vars";
+
+.carte__wrap {
+  @include row-flex();
+  max-width: 1280px;
+  margin: 0 auto;
+  min-width: 320px;
+  padding-bottom: 50px;
+  padding-top: 150px;
+}
+
+.carte__item {
+  @include col();
+  @include size(4);
+  @include size-lg(4);
+  @include size-md(6);
+  @include size-sm(12);
+  @include size-xs(12);
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  padding-bottom: 40px;
+  &:hover {
+    .carte__title {
+      color: $color-main;
+    }
+  }
+}
+
+.carte__title {
+  font-family: SeminariaNormal, Arial, sans-serif;
+  font-size: 48px;
+  line-height: normal;
+  position: absolute;
+  width: 50%;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: black;
+  z-index: 100;
+  text-align: center;
+}
+
+.promo__picture {
+  height: 100%;
+  width: 360px;
+  margin: 0;
+}
+
+.promo__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

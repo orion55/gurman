@@ -1,0 +1,104 @@
+@import "../base/_vars";
+
+.hall__wrap {
+  @include row-flex();
+  max-width: 1280px;
+  margin: 0 auto;
+  min-width: 320px;
+  padding-bottom: 60px;
+}
+
+.hall__title {
+  @include col();
+  @include size(12);
+  @include size-lg(12);
+  @include size-md(12);
+  @include size-sm(12);
+  @include size-xs(12);
+  text-align: center;
+  font-size: 3rem;
+  padding-bottom: 60px;
+}
+
+.hall__menu {
+  @include col();
+  @include size(12);
+  @include size-lg(12);
+  @include size-md(12);
+  @include size-sm(12);
+  @include size-xs(12);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+.hall__link {
+  font-size: 1.875rem;
+  color: black;
+  transition-delay: .3s;
+  transition-property: color, border-color;
+  border-bottom: solid 2px transparent;
+  &:hover {
+    color: $color-main;
+    border-bottom: solid 2px $color-main;
+  }
+  &:first-of-type {
+    margin-right: 30px;
+  }
+}
+
+.hall__link:visited {
+  color: black;
+  transition-delay: .3s;
+  &:hover {
+    color: $color-main;
+  }
+}
+
+.hall__menu a.hall__link--active {
+  color: $color-main;
+}
+
+.hall__slide {
+  @include row-flex();
+}
+
+.hall__block {
+  @include col();
+  @include size(4);
+  @include size-lg(4);
+  @include size-md(4);
+  @include size-sm(12);
+  @include size-xs(12);
+}
+
+.hall__pict {
+  @include col();
+  @include size(7);
+  @include shift-left(1);
+  @include size-lg(7);
+  @include shift-lg-left(1);
+  @include size-md(7);
+  @include shift-md-left(1);
+  @include size-sm(12);
+  @include size-xs(12);
+}
+
+.hall__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hall__text {
+  padding-bottom: 50px;
+}
+
+.hall__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
