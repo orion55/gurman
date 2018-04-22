@@ -52,3 +52,17 @@
   height: 100%;
   object-fit: cover;
 }
+
+@media only screen and (min-device-width: 768px) and (max-width: 1199px) {
+  .carte__wrap{
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .carte__wrap{
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+}

@@ -18,6 +18,7 @@
   text-align: center;
   font-size: 3rem;
   padding-bottom: 60px;
+  font-family: SeminariaNormal, Arial, sans-serif;
 }
 
 .hall__menu {
@@ -40,6 +41,7 @@
   transition-delay: .3s;
   transition-property: color, border-color;
   border-bottom: solid 2px transparent;
+  outline: none;
   &:hover {
     color: $color-main;
     border-bottom: solid 2px $color-main;
@@ -83,12 +85,16 @@
   @include size-md(7);
   @include shift-md-left(1);
   @include size-sm(12);
+  @include shift-sm-left(0);
   @include size-xs(12);
+  @include shift-xs-left(0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hall__img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 
@@ -101,4 +107,33 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+@media only screen and (min-device-width: 768px) and (max-width: 1199px) {
+  .hall__menu, .hall__wrap, .hall__title, .hall__text, .hall__pict {
+    padding-bottom: 20px;
+  }
+  .hall__wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .hall__menu, .hall__title, .hall__text, .hall__pict {
+    padding-bottom: 20px;
+  }
+  .hall__wrap {
+    padding-bottom: 40px;
+  }
+  .hall__pict {
+    order: -1;
+  }
+  .hall__wrap {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .hall__text {
+    display: none;
+  }
 }

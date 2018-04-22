@@ -27,6 +27,7 @@ ul li {
 
 a {
   text-decoration: none;
+  outline: none;
 }
 
 :focus,
@@ -671,6 +672,40 @@ div.wpcf7-response-output {
   margin-bottom: 0;
 }
 
+textarea.wpcf7-textarea {
+  padding-left: 15px;
+  padding-top: 15px;
+  box-shadow: inset 0 2px 3px #d3d3d3;
+  border-radius: 15px;
+}
+
+textarea.wpcf7-textarea:focus {
+  box-shadow: 0 0 5px #a60015;
+  border: 1px solid #a60015;
+}
+
+#address__form div.wpcf7 {
+  padding-top: 20px;
+  border: none;
+  background-color: transparent;
+}
+
+#address__form .contact__head {
+  font-size: 28px;
+  color: white;
+  padding-bottom: 20px;
+}
+
+#address__form .contact__email {
+  padding-bottom: 20px;
+}
+
+#address__form .contact__desc {
+  width: 400px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
 .carte__wrap {
   display: flex;
   flex-wrap: wrap;
@@ -747,6 +782,7 @@ div.wpcf7-response-output {
   text-align: center;
   font-size: 3rem;
   padding-bottom: 60px;
+  font-family: SeminariaNormal, Arial, sans-serif;
 }
 
 .hall__menu {
@@ -768,6 +804,7 @@ div.wpcf7-response-output {
   transition-delay: .3s;
   transition-property: color, border-color;
   border-bottom: solid 2px transparent;
+  outline: none;
 }
 
 .hall__link:hover {
@@ -814,11 +851,13 @@ div.wpcf7-response-output {
   margin-right: 0px;
   width: calc(58.33333% - 0px);
   margin-left: calc(8.33333% + 0px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hall__img {
   width: 100%;
-  height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -834,6 +873,37 @@ div.wpcf7-response-output {
   justify-content: center;
 }
 
+.address {
+  position: relative;
+  min-width: 320px;
+}
+
+.address__map {
+  height: 800px;
+  width: 100%;
+}
+
+.address__block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  height: 100%;
+  width: 35%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 100px 35px;
+}
+
+.address__text {
+  font-size: 17px;
+  color: white;
+  line-height: normal;
+}
+
+.address__box {
+  padding-bottom: 20px;
+}
+
 @media only screen and (min-device-width: 768px) and (max-width: 1199px) {
   html,
   body {
@@ -847,6 +917,40 @@ div.wpcf7-response-output {
 
   div.wpcf7 {
     width: 100%;
+  }
+
+  textarea.wpcf7-textarea {
+    width: 90%;
+  }
+
+  #address__form .contact__desc {
+    width: 100%;
+  }
+
+  input.wpcf7-text {
+    width: 90%;
+  }
+
+  .carte__wrap {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  .hall__menu,
+  .hall__wrap,
+  .hall__title,
+  .hall__text,
+  .hall__pict {
+    padding-bottom: 20px;
+  }
+
+  .hall__wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .address__block {
+    width: 50%;
   }
 }
 
@@ -1086,6 +1190,57 @@ div.wpcf7-response-output {
   .popmake-content input.wpcf7-dynamictext {
     font-size: 10px;
   }
+
+  textarea.wpcf7-textarea {
+    width: 90%;
+  }
+
+  #address__form .contact__desc {
+    width: 100%;
+  }
+
+  .carte__wrap {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  .hall__menu,
+  .hall__title,
+  .hall__text,
+  .hall__pict {
+    padding-bottom: 20px;
+  }
+
+  .hall__wrap {
+    padding-bottom: 40px;
+  }
+
+  .hall__pict {
+    order: -1;
+  }
+
+  .hall__wrap {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .hall__text {
+    display: none;
+  }
+
+  .address__map {
+    height: 400px;
+  }
+
+  .address__block {
+    position: static;
+    width: 100%;
+    padding: 40px 20px 20px 20px;
+  }
+
+  .address__box {
+    padding-bottom: 0;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1144,6 +1299,10 @@ div.wpcf7-response-output {
   .hall__pict {
     width: calc(100% - 0px);
   }
+
+  .hall__pict {
+    margin-left: calc(0% + 0px);
+  }
 }
 
 @media screen and (max-width: 560px) {
@@ -1201,5 +1360,9 @@ div.wpcf7-response-output {
 
   .hall__pict {
     width: calc(100% - 0px);
+  }
+
+  .hall__pict {
+    margin-left: calc(0% + 0px);
   }
 }
