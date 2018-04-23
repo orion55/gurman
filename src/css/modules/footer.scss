@@ -1,0 +1,84 @@
+@import "../base/_vars";
+
+.footer {
+  background-color: black;
+}
+
+.footer__wrap {
+  @include row-flex();
+  max-width: 1280px;
+  margin: 0 auto;
+  min-width: 320px;
+}
+
+.footer__phone {
+  @include col();
+  @include size(2);
+  @include size-lg(3);
+  @include size-md(3);
+  @include size-sm(12);
+  @include size-xs(12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .phone-number {
+    color: white;
+  }
+}
+
+.footer__picture {
+  @include col();
+  @include size(8);
+  @include size-lg(7);
+  @include size-md(7);
+  @include size-sm(12);
+  @include size-xs(12);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer__social {
+  @include col();
+  @include size(2);
+  @include size-lg(2);
+  @include size-md(2);
+  @include size-sm(12);
+  @include size-xs(12);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .soc__url svg {
+    color: white;
+  }
+}
+
+.footer__pict {
+  width: 100px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (min-device-width: 768px) and (max-width: 960px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+  .footer__pict {
+    width: 150px;
+  }
+  .footer__phone {
+    padding-top: 20px;
+  }
+  .footer__social {
+    padding-bottom: 20px;
+  }
+}
