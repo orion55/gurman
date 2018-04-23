@@ -1,9 +1,7 @@
 @import "../base/_vars";
 
 .header {
-  background: url('../img/header/background.jpg') no-repeat center center;
-  background-size: cover;
-  height: 1220px;
+  position: relative;
   &::before {
     content: '';
     position: absolute;
@@ -13,8 +11,23 @@
     background: url('../img/header/ellipse.png') no-repeat center center;
     height: 212px;
     width: 100%;
-    z-index: 0;
+    z-index: 100;
   }
+}
+
+.header__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  height: 100%;
+  width: 100%;
+}
+
+.header__backimg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .header__wrap {

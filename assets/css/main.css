@@ -334,9 +334,7 @@ input.pure-button:focus {
 }
 
 .header {
-  background: url("../img/header/background.jpg") no-repeat center center;
-  background-size: cover;
-  height: 1220px;
+  position: relative;
 }
 
 .header::before {
@@ -349,7 +347,23 @@ input.pure-button:focus {
   background: url("../img/header/ellipse.png") no-repeat center center;
   height: 212px;
   width: 100%;
-  z-index: 0;
+  z-index: 100;
+}
+
+.header__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  height: 100%;
+  width: 100%;
+}
+
+.header__backimg {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .header__wrap {
@@ -500,6 +514,7 @@ input.pure-button:focus {
   z-index: 100;
   min-width: 320px;
   flex-direction: column;
+  padding-bottom: 100px;
 }
 
 .info__title {

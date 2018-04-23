@@ -10,6 +10,17 @@
 
 <body <?php body_class(); ?>>
 <header class="header">
+    <?php $backgroundUrl = get_template_directory_uri() . "/assets/img/header/background.jpg";
+    if (is_tax('carte')) {
+        $carte_background = carbon_get_term_meta(get_queried_object()->term_id, 'carte_background');
+        if (!empty($carte_background)) {
+            $backgroundUrl = $carte_background;
+        }
+    } ?>
+    <div class="header__background">
+        <img src="<?php echo $backgroundUrl; ?>" alt="background" class="header__backimg">
+    </div>
+
     <div class="header__wrap">
         <nav id="site-navigation" class="main-navigation">
             <?php
@@ -34,22 +45,25 @@
             <?php get_template_part('inc/phone'); ?>
         </div>
     </div>
-    <div class="info">
-        <div class="info__wrap">
-            <h1 class="info__title">Сербская кухня</h1>
-            <div class="info__slogan">Проведение банкетов, фуршетов и других мероприятий</div>
-            <div class="info__btn">
-                <a href="#"
-                   class="info__link pure-button hvr-shutter-out-horizontal popmake-contact modal-blur">Заказать столик</a>
-            </div>
-            <?php $slogan = carbon_get_theme_option('crb_slogan');
-            if (!empty($slogan)):?>
-                <div class="info__block">
-                    <?php echo wpautop($slogan); ?>
+    <?php if (is_front_page()): ?>
+        <div class="info">
+            <div class="info__wrap">
+                <h1 class="info__title">Сербская кухня</h1>
+                <div class="info__slogan">Проведение банкетов, фуршетов и других мероприятий</div>
+                <div class="info__btn">
+                    <a href="#"
+                       class="info__link pure-button hvr-shutter-out-horizontal popmake-contact modal-blur">Заказать
+                        столик</a>
                 </div>
-            <?php endif; ?>
+                <?php $slogan = carbon_get_theme_option('crb_slogan');
+                if (!empty($slogan)):?>
+                    <div class="info__block">
+                        <?php echo wpautop($slogan); ?>
+                    </div>
+                <?php endif; ?>
+            </div>
         </div>
-    </div>
+    <?php endif; ?>
 </header>
 
 <div id="page" class="site">

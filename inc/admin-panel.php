@@ -56,6 +56,8 @@ function crb_attach_theme_options()
         ->where( 'term_taxonomy', '=', 'carte' )
         ->add_fields( array(
             Field::make('image', 'carte_photo', 'Картинка для главной страницы')
+                ->set_value_type('url'),
+            Field::make('image', 'carte_background', 'Картинка для каталога')
                 ->set_value_type('url')
         ) );
 }
