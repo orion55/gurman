@@ -64,6 +64,13 @@
             </div>
         </div>
     <?php endif; ?>
+    <?php if (is_tax('carte')): ?>
+        <div class="tax">
+            <div class="tax__wrap">
+                <h1 class="tax__title"><?php echo get_queried_object()->name; ?></h1>
+            </div>
+        </div>
+    <?php endif; ?>
 </header>
 
 <div id="page" class="site">
