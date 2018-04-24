@@ -1,0 +1,17 @@
+@import "../base/_vars";
+
+.dish {
+  background: url("../img/tax/back.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+
+.dish__wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  min-width: 320px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}

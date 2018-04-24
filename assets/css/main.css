@@ -1020,6 +1020,99 @@ textarea.wpcf7-textarea:focus {
   width: calc(100% - 0px);
 }
 
+.dish {
+  background: url("../img/tax/back.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+
+.dish__wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  min-width: 320px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.course {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-bottom: 50px;
+}
+
+.course:nth-of-type(2n+1) .course__pict {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: calc(25% - 0px);
+  margin-left: calc(8.33333% + 0px);
+}
+
+.course:nth-of-type(2n+1) .course__block {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: calc(58.33333% - 0px);
+  margin-left: calc(8.33333% + 0px);
+  text-align: left;
+}
+
+.course:nth-of-type(2n) .course__pict {
+  order: 1;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: calc(25% - 0px);
+  margin-right: calc(8.33333% + 0px);
+}
+
+.course:nth-of-type(2n) .course__block {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: calc(58.33333% - 0px);
+  margin-right: calc(8.33333% + 0px);
+  text-align: right;
+}
+
+.course__pict {
+  text-align: center;
+}
+
+.course__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.course__title {
+  font-size: 36px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  line-height: normal;
+}
+
+.course__desc {
+  padding-bottom: 20px;
+}
+
+.course__desc p {
+  font-size: 23px;
+  line-height: normal;
+}
+
+.course__price {
+  font-size: 23px;
+}
+
 @media only screen and (min-device-width: 768px) and (max-width: 1199px) {
   html,
   body {
@@ -1146,6 +1239,38 @@ textarea.wpcf7-textarea:focus {
   .tax__title {
     width: calc(100% - 0px);
   }
+
+  .course:nth-of-type(2n+1) .course__pict {
+    width: calc(25% - 0px);
+  }
+
+  .course:nth-of-type(2n+1) .course__pict {
+    margin-left: calc(8.33333% + 0px);
+  }
+
+  .course:nth-of-type(2n+1) .course__block {
+    width: calc(58.33333% - 0px);
+  }
+
+  .course:nth-of-type(2n+1) .course__block {
+    margin-left: calc(8.33333% + 0px);
+  }
+
+  .course:nth-of-type(2n) .course__pict {
+    width: calc(25% - 0px);
+  }
+
+  .course:nth-of-type(2n) .course__pict {
+    margin-right: calc(8.33333% + 0px);
+  }
+
+  .course:nth-of-type(2n) .course__block {
+    width: calc(58.33333% - 0px);
+  }
+
+  .course:nth-of-type(2n) .course__block {
+    margin-right: calc(8.33333% + 0px);
+  }
 }
 
 @media only screen and (min-device-width: 961px) and (max-width: 1199px) {
@@ -1244,6 +1369,38 @@ textarea.wpcf7-textarea:focus {
 
   .tax__title {
     width: calc(100% - 0px);
+  }
+
+  .course:nth-of-type(2n+1) .course__pict {
+    width: calc(100% - 0px);
+  }
+
+  .course:nth-of-type(2n+1) .course__pict {
+    margin-left: calc(0% + 0px);
+  }
+
+  .course:nth-of-type(2n+1) .course__block {
+    width: calc(100% - 0px);
+  }
+
+  .course:nth-of-type(2n+1) .course__block {
+    margin-left: calc(0% + 0px);
+  }
+
+  .course:nth-of-type(2n) .course__pict {
+    width: calc(100% - 0px);
+  }
+
+  .course:nth-of-type(2n) .course__pict {
+    margin-right: calc(0% + 0px);
+  }
+
+  .course:nth-of-type(2n) .course__block {
+    width: calc(100% - 0px);
+  }
+
+  .course:nth-of-type(2n) .course__block {
+    margin-right: calc(0% + 0px);
   }
 }
 
@@ -1489,6 +1646,38 @@ textarea.wpcf7-textarea:focus {
   .tax__title {
     width: calc(100% - 0px);
   }
+
+  .course:nth-of-type(2n+1) .course__pict {
+    width: calc(100% - 0px);
+  }
+
+  .course:nth-of-type(2n+1) .course__pict {
+    margin-left: calc(0% + 0px);
+  }
+
+  .course:nth-of-type(2n+1) .course__block {
+    width: calc(100% - 0px);
+  }
+
+  .course:nth-of-type(2n+1) .course__block {
+    margin-left: calc(0% + 0px);
+  }
+
+  .course:nth-of-type(2n) .course__pict {
+    width: calc(100% - 0px);
+  }
+
+  .course:nth-of-type(2n) .course__pict {
+    margin-right: calc(0% + 0px);
+  }
+
+  .course:nth-of-type(2n) .course__block {
+    width: calc(100% - 0px);
+  }
+
+  .course:nth-of-type(2n) .course__block {
+    margin-right: calc(0% + 0px);
+  }
 }
 
 @media screen and (max-width: 560px) {
@@ -1566,5 +1755,37 @@ textarea.wpcf7-textarea:focus {
 
   .tax__title {
     width: calc(100% - 0px);
+  }
+
+  .course:nth-of-type(2n+1) .course__pict {
+    width: calc(100% - 0px);
+  }
+
+  .course:nth-of-type(2n+1) .course__pict {
+    margin-left: calc(0% + 0px);
+  }
+
+  .course:nth-of-type(2n+1) .course__block {
+    width: calc(100% - 0px);
+  }
+
+  .course:nth-of-type(2n+1) .course__block {
+    margin-left: calc(0% + 0px);
+  }
+
+  .course:nth-of-type(2n) .course__pict {
+    width: calc(100% - 0px);
+  }
+
+  .course:nth-of-type(2n) .course__pict {
+    margin-right: calc(0% + 0px);
+  }
+
+  .course:nth-of-type(2n) .course__block {
+    width: calc(100% - 0px);
+  }
+
+  .course:nth-of-type(2n) .course__block {
+    margin-right: calc(0% + 0px);
   }
 }
