@@ -9,7 +9,8 @@
 </head>
 
 <body <?php body_class(); ?>>
-<header class="header">
+<header class="header <?php if (is_tax('carte')):
+    echo "header--tax"; endif;?>">
     <?php $backgroundUrl = get_template_directory_uri() . "/assets/img/header/background.jpg";
     if (is_tax('carte')) {
         $carte_background = carbon_get_term_meta(get_queried_object()->term_id, 'carte_background');

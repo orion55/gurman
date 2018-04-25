@@ -12,13 +12,13 @@
   margin: 0 auto;
   position: relative;
   min-width: 320px;
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 100px;
 }
 
 .dish__pagenavi {
   text-align: center;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   .wp-pagenavi {
     font-size: 24px;
   }
@@ -27,10 +27,18 @@
     color: black;
     transition-delay: .3s;
   }
-  span.current{
+  span.current {
     color: $color-main;
   }
-  .wp-pagenavi a:hover{
+  .wp-pagenavi a:hover {
     color: $color-main;
   }
+}
+
+@media only screen and (min-device-width: 768px) and (max-width: 960px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+
 }

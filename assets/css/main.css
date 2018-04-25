@@ -333,6 +333,24 @@ input.pure-button:focus {
   transform: scaleX(1);
 }
 
+.content-area {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.site-main {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: calc(100% - 0px);
+  max-width: 1280px;
+  margin: 0 auto;
+  min-width: 320px;
+}
+
 .header {
   position: relative;
 }
@@ -357,6 +375,19 @@ input.pure-button:focus {
   z-index: 50;
   height: 100%;
   width: 100%;
+}
+
+.header--tax .header__backimg {
+  -o-object-position: 50% 100%;
+  object-position: 50% 100%;
+}
+
+.header--tax .header__wrap {
+  padding-bottom: 0;
+}
+
+.header--tax .tax__wrap {
+  padding-bottom: 50px;
 }
 
 .header__backimg {
@@ -721,6 +752,64 @@ textarea.wpcf7-textarea:focus {
   padding-bottom: 20px;
 }
 
+#dish__form div.wpcf7 {
+  padding-top: 20px;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+#dish__form .contact__block,
+#dish__form .contact__email,
+#dish__form .contact__name {
+  margin-right: 25px;
+}
+
+#dish__form .wpcf7-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  padding: 50px 50px 40px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: calc(83.33333% - 0px);
+  margin-left: calc(8.33333% + 0px);
+}
+
+#dish__form .contact__email {
+  padding-top: 5px;
+}
+
+#dish__form .contact__name {
+  padding-bottom: 0;
+  padding-top: 5px;
+}
+
+#dish__form input.wpcf7-text {
+  width: 220px;
+}
+
+#dish__form .contact__text {
+  font-size: 26px;
+  font-family: SeminariaNormal, Arial, sans-serif;
+}
+
+#dish__form .form-group {
+  padding-top: 20px;
+}
+
+#dish__form div.contact__btn {
+  padding-top: 15px;
+}
+
 .carte__wrap {
   display: flex;
   flex-wrap: wrap;
@@ -997,7 +1086,7 @@ textarea.wpcf7-textarea:focus {
   max-width: 1280px;
   margin: 0 auto;
   position: relative;
-  z-index: 100;
+  z-index: 50;
   min-width: 320px;
   flex-direction: column;
   padding-bottom: 630px;
@@ -1007,7 +1096,7 @@ textarea.wpcf7-textarea:focus {
 .tax__title {
   font-family: 'SeminariaNormal', 'Arial', sans-serif;
   color: white;
-  font-size: 8.125rem;
+  font-size: 6.875rem;
   font-weight: 400;
   text-align: center;
   margin: 0;
@@ -1032,13 +1121,13 @@ textarea.wpcf7-textarea:focus {
   margin: 0 auto;
   position: relative;
   min-width: 320px;
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 100px;
 }
 
 .dish__pagenavi {
   text-align: center;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 
 .dish__pagenavi .wp-pagenavi {
@@ -1167,6 +1256,20 @@ textarea.wpcf7-textarea:focus {
     width: 90%;
   }
 
+  #dish__form .wpcf7-form {
+    flex-direction: column;
+  }
+
+  #dish__form input.wpcf7-text {
+    width: 90%;
+  }
+
+  #dish__form .contact__block,
+  #dish__form .contact__email,
+  #dish__form .contact__name {
+    margin-right: 0;
+  }
+
   .carte__wrap {
     padding-top: 40px;
     padding-bottom: 20px;
@@ -1191,6 +1294,10 @@ textarea.wpcf7-textarea:focus {
 }
 
 @media screen and (max-width: 1199x) {
+  .site-main {
+    width: calc(100% - 0px);
+  }
+
   .header__picture {
     width: calc(16.66667% - 0px);
   }
@@ -1225,6 +1332,14 @@ textarea.wpcf7-textarea:focus {
 
   .info__block {
     margin-right: calc(8.33333% + 0px);
+  }
+
+  #dish__form .wpcf7-form {
+    width: calc(83.33333% - 0px);
+  }
+
+  #dish__form .wpcf7-form {
+    margin-left: calc(8.33333% + 0px);
   }
 
   .carte__item {
@@ -1318,6 +1433,10 @@ textarea.wpcf7-textarea:focus {
 }
 
 @media screen and (max-width: 960px) {
+  .site-main {
+    width: calc(100% - 0px);
+  }
+
   .main-navigation {
     width: calc(41.66667% - 0px);
   }
@@ -1356,6 +1475,14 @@ textarea.wpcf7-textarea:focus {
 
   .info__block {
     margin-right: calc(8.33333% + 0px);
+  }
+
+  #dish__form .wpcf7-form {
+    width: calc(83.33333% - 0px);
+  }
+
+  #dish__form .wpcf7-form {
+    margin-left: calc(8.33333% + 0px);
   }
 
   .carte__item {
@@ -1536,6 +1663,25 @@ textarea.wpcf7-textarea:focus {
     width: 100%;
   }
 
+  #dish__form {
+    padding: 15px;
+  }
+
+  #dish__form .wpcf7-form {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  #dish__form input.wpcf7-text {
+    width: 90%;
+  }
+
+  #dish__form .contact__block,
+  #dish__form .contact__email,
+  #dish__form .contact__name {
+    margin-right: 0;
+  }
+
   .carte__wrap {
     padding-top: 40px;
     padding-bottom: 20px;
@@ -1615,6 +1761,10 @@ textarea.wpcf7-textarea:focus {
 }
 
 @media screen and (max-width: 767px) {
+  .site-main {
+    width: calc(100% - 0px);
+  }
+
   .header__picture {
     width: calc(100% - 0px);
   }
@@ -1649,6 +1799,14 @@ textarea.wpcf7-textarea:focus {
 
   .info__block {
     margin-right: calc(0% + 0px);
+  }
+
+  #dish__form .wpcf7-form {
+    width: calc(100% - 0px);
+  }
+
+  #dish__form .wpcf7-form {
+    margin-left: calc(0% + 0px);
   }
 
   .carte__item {
@@ -1725,6 +1883,10 @@ textarea.wpcf7-textarea:focus {
 }
 
 @media screen and (max-width: 560px) {
+  .site-main {
+    width: calc(100% - 0px);
+  }
+
   .header__picture {
     width: calc(100% - 0px);
   }
@@ -1759,6 +1921,14 @@ textarea.wpcf7-textarea:focus {
 
   .info__block {
     margin-right: calc(0% + 0px);
+  }
+
+  #dish__form .wpcf7-form {
+    width: calc(100% - 0px);
+  }
+
+  #dish__form .wpcf7-form {
+    margin-left: calc(0% + 0px);
   }
 
   .carte__item {

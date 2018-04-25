@@ -41,7 +41,9 @@
                         <?php wp_pagenavi(); ?>
                     </div>
                 <?php endif ?>
-
+                <div class="dish__form"  id="dish__form">
+                    <?php echo do_shortcode('[contact-form-7 id="120" title="Понравилось наше меню"]'); ?>
+                </div>
             <?php else :
                 get_template_part('template-parts/content', 'none');
             endif; ?>

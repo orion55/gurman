@@ -24,6 +24,18 @@
   width: 100%;
 }
 
+.header--tax {
+  .header__backimg {
+    object-position: 50% 100%;
+  }
+  .header__wrap {
+    padding-bottom: 0;
+  }
+  .tax__wrap {
+    padding-bottom: 50px;
+  }
+}
+
 .header__backimg {
   height: 100%;
   width: 100%;
