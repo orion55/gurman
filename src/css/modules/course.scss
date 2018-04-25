@@ -10,8 +10,8 @@
       @include shift-left(1);
       @include size-lg(3);
       @include shift-lg-left(1);
-      @include size-md(12);
-      @include shift-md-left(0);
+      @include size-md(3);
+      @include shift-md-left(1);
       @include size-sm(12);
       @include shift-sm-left(0);
       @include size-xs(12);
@@ -24,8 +24,8 @@
       @include shift-left(1);
       @include size-lg(7);
       @include shift-lg-left(1);
-      @include size-md(12);
-      @include shift-md-left(0);
+      @include size-md(7);
+      @include shift-md-left(1);
       @include size-sm(12);
       @include shift-sm-left(0);
       @include size-xs(12);
@@ -41,8 +41,8 @@
       @include shift-right(1);
       @include size-lg(3);
       @include shift-lg-right(1);
-      @include size-md(12);
-      @include shift-md-right(0);
+      @include size-md(3);
+      @include shift-md-right(1);
       @include size-sm(12);
       @include shift-sm-right(0);
       @include size-xs(12);
@@ -54,8 +54,8 @@
       @include shift-right(1);
       @include size-lg(7);
       @include shift-lg-right(1);
-      @include size-md(12);
-      @include shift-md-right(0);
+      @include size-md(7);
+      @include shift-md-right(1);
       @include size-sm(12);
       @include shift-sm-right(0);
       @include size-xs(12);
@@ -67,6 +67,9 @@
 
 .course__pict {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .course__block {
@@ -76,7 +79,7 @@
 }
 
 .course__title {
-  font-size: 36px;
+  font-size: 2.250rem;
   font-weight: bold;
   padding-bottom: 20px;
   line-height: normal;
@@ -92,4 +95,30 @@
 
 .course__price {
   font-size: 23px;
+}
+
+@media only screen and (min-device-width: 768px) and (max-width: 1199px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+  .course {
+    &:nth-of-type(2n) {
+      .course__pict {
+        order: -1;
+        padding-bottom: 20px;
+      }
+      .course__block {
+        text-align: center;
+      }
+    }
+    &:nth-of-type(2n+1) {
+      .course__pict {
+        padding-bottom: 20px;
+      }
+      .course__block {
+        text-align: center;
+      }
+    }
+  }
 }

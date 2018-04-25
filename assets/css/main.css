@@ -1036,6 +1036,30 @@ textarea.wpcf7-textarea:focus {
   padding-bottom: 100px;
 }
 
+.dish__pagenavi {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.dish__pagenavi .wp-pagenavi {
+  font-size: 24px;
+}
+
+.dish__pagenavi .wp-pagenavi a,
+.dish__pagenavi .wp-pagenavi span {
+  border: none;
+  color: black;
+  transition-delay: .3s;
+}
+
+.dish__pagenavi span.current {
+  color: #a60015;
+}
+
+.dish__pagenavi .wp-pagenavi a:hover {
+  color: #a60015;
+}
+
 .course {
   display: flex;
   flex-wrap: wrap;
@@ -1085,6 +1109,9 @@ textarea.wpcf7-textarea:focus {
 
 .course__pict {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .course__block {
@@ -1094,7 +1121,7 @@ textarea.wpcf7-textarea:focus {
 }
 
 .course__title {
-  font-size: 36px;
+  font-size: 2.250rem;
   font-weight: bold;
   padding-bottom: 20px;
   line-height: normal;
@@ -1372,35 +1399,35 @@ textarea.wpcf7-textarea:focus {
   }
 
   .course:nth-of-type(2n+1) .course__pict {
-    width: calc(100% - 0px);
+    width: calc(25% - 0px);
   }
 
   .course:nth-of-type(2n+1) .course__pict {
-    margin-left: calc(0% + 0px);
+    margin-left: calc(8.33333% + 0px);
   }
 
   .course:nth-of-type(2n+1) .course__block {
-    width: calc(100% - 0px);
+    width: calc(58.33333% - 0px);
   }
 
   .course:nth-of-type(2n+1) .course__block {
-    margin-left: calc(0% + 0px);
+    margin-left: calc(8.33333% + 0px);
   }
 
   .course:nth-of-type(2n) .course__pict {
-    width: calc(100% - 0px);
+    width: calc(25% - 0px);
   }
 
   .course:nth-of-type(2n) .course__pict {
-    margin-right: calc(0% + 0px);
+    margin-right: calc(8.33333% + 0px);
   }
 
   .course:nth-of-type(2n) .course__block {
-    width: calc(100% - 0px);
+    width: calc(58.33333% - 0px);
   }
 
   .course:nth-of-type(2n) .course__block {
-    margin-right: calc(0% + 0px);
+    margin-right: calc(8.33333% + 0px);
   }
 }
 
@@ -1567,6 +1594,23 @@ textarea.wpcf7-textarea:focus {
   .tax__wrap {
     padding-top: 0;
     padding-bottom: 100px;
+  }
+
+  .course:nth-of-type(2n) .course__pict {
+    order: -1;
+    padding-bottom: 20px;
+  }
+
+  .course:nth-of-type(2n) .course__block {
+    text-align: center;
+  }
+
+  .course:nth-of-type(2n+1) .course__pict {
+    padding-bottom: 20px;
+  }
+
+  .course:nth-of-type(2n+1) .course__block {
+    text-align: center;
   }
 }
 

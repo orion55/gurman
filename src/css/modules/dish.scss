@@ -15,3 +15,22 @@
   padding-top: 100px;
   padding-bottom: 100px;
 }
+
+.dish__pagenavi {
+  text-align: center;
+  padding-bottom: 50px;
+  .wp-pagenavi {
+    font-size: 24px;
+  }
+  .wp-pagenavi a, .wp-pagenavi span {
+    border: none;
+    color: black;
+    transition-delay: .3s;
+  }
+  span.current{
+    color: $color-main;
+  }
+  .wp-pagenavi a:hover{
+    color: $color-main;
+  }
+}
