@@ -88,4 +88,7 @@ endif;
 </header>
 
 <div id="page" class="site">
-    <div id="content" class="site-content">
+    <div id="content" class="<?php
+    if (!is_front_page()):
+        echo "site-content";
+    endif; ?>">
