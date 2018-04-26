@@ -9,8 +9,20 @@
 </head>
 
 <body <?php body_class(); ?>>
-<header class="header <?php if (is_tax('carte')):
-    echo "header--tax"; endif;?>">
+<?php if (is_page()): ?>
+    <div class="preloader">
+        <div class="page-loader-circle"></div>
+    </div>
+<?php endif; ?>
+
+<header class="header <?php
+if (is_tax('carte')):
+    echo "header--tax ";
+endif;
+if (is_page()):
+    echo "header--page ";
+endif;
+?>">
     <?php $backgroundUrl = get_template_directory_uri() . "/assets/img/header/background.jpg";
     if (is_tax('carte')) {
         $carte_background = carbon_get_term_meta(get_queried_object()->term_id, 'carte_background');
@@ -18,10 +30,11 @@
             $backgroundUrl = $carte_background;
         }
     } ?>
-    <div class="header__background">
-        <img src="<?php echo $backgroundUrl; ?>" alt="background" class="header__backimg">
-    </div>
-
+    <?php if (is_front_page() or is_tax('carte')): ?>
+        <div class="header__background">
+            <img src="<?php echo $backgroundUrl; ?>" alt="background" class="header__backimg">
+        </div>
+    <?php endif; ?>
     <div class="header__wrap">
         <nav id="site-navigation" class="main-navigation">
             <?php

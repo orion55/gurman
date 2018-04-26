@@ -34,6 +34,15 @@ jQuery(document).ready(function ($) {
 'use strict';
 
 jQuery(document).ready(function ($) {
+    $(window).load(function () {
+        setTimeout(function () {
+            $('.preloader').fadeOut('slow', function () {});
+        }, 2000);
+    });
+});
+'use strict';
+
+jQuery(document).ready(function ($) {
     var slide = $('.hall__slide');
     var menuLink = $('.hall__link');
 
