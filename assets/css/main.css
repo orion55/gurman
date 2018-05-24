@@ -945,7 +945,7 @@ textarea.wpcf7-textarea:focus {
   word-wrap: break-word;
   margin-left: 0px;
   margin-right: 0px;
-  width: calc(33.33333% - 0px);
+  width: calc(41.66667% - 0px);
 }
 
 .hall__pict {
@@ -954,7 +954,6 @@ textarea.wpcf7-textarea:focus {
   margin-left: 0px;
   margin-right: 0px;
   width: calc(58.33333% - 0px);
-  margin-left: calc(8.33333% + 0px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -968,6 +967,8 @@ textarea.wpcf7-textarea:focus {
 
 .hall__text {
   padding-bottom: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .hall__block {
@@ -1256,6 +1257,10 @@ textarea.wpcf7-textarea:focus {
     width: 90%;
   }
 
+  .popmake-content input.wpcf7-dynamictext {
+    font-size: 13px;
+  }
+
   #dish__form .wpcf7-form {
     flex-direction: column;
   }
@@ -1355,15 +1360,11 @@ textarea.wpcf7-textarea:focus {
   }
 
   .hall__block {
-    width: calc(33.33333% - 0px);
+    width: calc(41.66667% - 0px);
   }
 
   .hall__pict {
     width: calc(58.33333% - 0px);
-  }
-
-  .hall__pict {
-    margin-left: calc(8.33333% + 0px);
   }
 
   .footer__phone {
@@ -1498,15 +1499,11 @@ textarea.wpcf7-textarea:focus {
   }
 
   .hall__block {
-    width: calc(33.33333% - 0px);
+    width: calc(41.66667% - 0px);
   }
 
   .hall__pict {
     width: calc(58.33333% - 0px);
-  }
-
-  .hall__pict {
-    margin-left: calc(8.33333% + 0px);
   }
 
   .footer__phone {
@@ -1829,10 +1826,6 @@ textarea.wpcf7-textarea:focus {
     width: calc(100% - 0px);
   }
 
-  .hall__pict {
-    margin-left: calc(0% + 0px);
-  }
-
   .footer__phone {
     width: calc(100% - 0px);
   }
@@ -1949,10 +1942,6 @@ textarea.wpcf7-textarea:focus {
 
   .hall__pict {
     width: calc(100% - 0px);
-  }
-
-  .hall__pict {
-    margin-left: calc(0% + 0px);
   }
 
   .footer__phone {

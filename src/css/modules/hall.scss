@@ -69,9 +69,9 @@
 
 .hall__block {
   @include col();
-  @include size(4);
-  @include size-lg(4);
-  @include size-md(4);
+  @include size(5);
+  @include size-lg(5);
+  @include size-md(5);
   @include size-sm(12);
   @include size-xs(12);
 }
@@ -79,15 +79,15 @@
 .hall__pict {
   @include col();
   @include size(7);
-  @include shift-left(1);
+  //@include shift-left(1);
   @include size-lg(7);
-  @include shift-lg-left(1);
+  //@include shift-lg-left(1);
   @include size-md(7);
-  @include shift-md-left(1);
+  //@include shift-md-left(1);
   @include size-sm(12);
-  @include shift-sm-left(0);
+  //@include shift-sm-left(0);
   @include size-xs(12);
-  @include shift-xs-left(0);
+  //@include shift-xs-left(0);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,6 +100,8 @@
 
 .hall__text {
   padding-bottom: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .hall__block {
